@@ -2,7 +2,6 @@
 const express = require("express");
 const PORT = process.env.PORT || 8080;
 const app = express();
-const orm = require("./config/orm");
 
 app.use(express.static("public"));
 
@@ -23,9 +22,3 @@ var routes = require("./controllers/burgers_controller.js");
 app.listen(PORT, () => {
     console.log("Server listening on: http://localhost:" + PORT);
 });
-
-orm.selectAll();
-
-orm.insertOne("Mongo Burger");
-
-// orm.updateOne(true, "Mongo Burger");

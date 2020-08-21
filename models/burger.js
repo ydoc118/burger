@@ -1,7 +1,22 @@
 const orm = require("../config/orm");
 
-orm.selectAll();
+const burgers = {
+    selectAll: (cb) => {
+        orm.selectAll((res) => {
+            cb(res);
+        });
+    },
+    insertOne: (burger_name, cb) => {
+        orm.insertOne(burger_name, (res) => {
+            cb(res);
+        });
+    },
+    updateOne: (devoured, burger_name, cb) => {
+        orm.updateOne(devoured, burger_name, (res) => {
+            cb(res)
+        }) 
+    }
+};
 
-orm.insertOne("Mongo Burger");
+module.exports = burgers;
 
-orm.updateOne(true, "Mongo Burger");
