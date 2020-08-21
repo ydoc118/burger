@@ -1,0 +1,18 @@
+<h1 class = "title">Eat-Da-Burger</h1>
+
+<ul>
+    {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burgers-hbs devoured=false}}
+        {{/unless}}
+    {{/each}}    
+     
+</ul>
+
+<ul>
+    {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burgers-hbs devoured=true}}
+        {{/if}}
+    {{/each}}
+</ul>

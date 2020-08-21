@@ -1,6 +1,8 @@
 const connection = require("./connection");
 
 
+
+
 const orm = {
     selectAll: (cb) => {
         const queryString = `SELECT * FROM burgers;`
@@ -12,9 +14,9 @@ const orm = {
 
     insertOne: (burger_name, cb) => {
         const queryString = `INSERT INTO burgers (burger_name) VALUES (?)`
-        connection.query(queryString, [burger_name], (err, result) => {
+        connection.query(queryString, [burger_name], (err, res) => {
             if(err) throw err;
-            cb(result);
+            cb(res);
         }) 
     },
 
