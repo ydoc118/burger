@@ -21,7 +21,7 @@ To install all necessary dependencies, run the following command:
 
 ## Information
 
-deployed to Heroku
+deployed to Heroku here: https://quiet-ridge-60363.herokuapp.com/
 
 
 ## License
