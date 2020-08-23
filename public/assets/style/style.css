@@ -1,0 +1,36 @@
+html, .container {
+    background-color: orange;
+}
+
+h2 {
+    margin-left: 6%;
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+
+.title, .burgToEat {
+    text-align: center;
+    text-decoration: underline
+};
+
+#gif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#burgersTop {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.addBurger {
+    margin-bottom: 15%;
+};
+
+
+
+
