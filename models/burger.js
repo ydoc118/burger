@@ -6,15 +6,20 @@ const burgers = {
             cb(res);
         });
     },
-    insertOne: (burger_name, cb) => {
+    insertOne: (burger_name) => {
         orm.insertOne(burger_name, (res) => {
-            cb(res);
+            console.log(res);
         });
     },
-    updateOne: (devoured, burger_name, cb) => {
-        orm.updateOne(devoured, burger_name, (res) => {
+    updateOne: (id, devoured, cb) => {
+        orm.updateOne(devoured, id, (res) => {
             cb(res)
         }) 
+    },
+    delete: (id, devoured, cb) => {
+        orm.delete(id, devoured, cb), (res) => {
+            cb(res)
+        }
     }
 };
 
